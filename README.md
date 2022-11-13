@@ -5,5 +5,5 @@
 ## 필기 바로가기
 - [note](https://github.com/mmtos/spring-boot-practice/tree/batch/src/main/resources/note/batch)
 
-## 예제 바로가기
-- [basic](https://github.com/mmtos/spring-boot-practice/tree/basic)
+## 메인으로 가기
+- [main](https://github.com/mmtos/spring-boot-practice)
