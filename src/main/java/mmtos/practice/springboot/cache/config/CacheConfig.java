@@ -14,7 +14,7 @@ import org.springframework.context.annotation.Configuration;
 @Configuration
 @EnableCaching
 public class CacheConfig {
-
+    public final static String BUS_STOP_CACHE_NAME = "busStopCacheStore";
     @Bean
     public CacheManager cacheManager() {
         // https://www.baeldung.com/spring-cache-tutorial
@@ -27,7 +27,7 @@ public class CacheConfig {
             }
         };
 
-        cacheManager.setCacheNames(Arrays.asList("cachestore"));
+        cacheManager.setCacheNames(Arrays.asList(BUS_STOP_CACHE_NAME));
 
         return cacheManager;
     }

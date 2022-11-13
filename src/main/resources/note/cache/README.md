@@ -2,6 +2,7 @@
 
 ## TODO
 - [x] 캐시 엔트리별로 ttl 적용하기
+- [X] 캐시 엔트리별로 ttl 적용하기 테스트 작성 
 - [ ] redis로 여러 서버에서 공유할 수 있는 캐시 만들기
 
 ## 학습
@@ -31,3 +32,9 @@
   - https://docs.spring.io/spring-framework/docs/current/reference/html/core.html#aop-introduction-proxies
   - https://www.baeldung.com/java-dynamic-proxies
   - https://stackoverflow.com/questions/55964758/how-to-advise-static-methods-using-spring-aop
+
+
+
+### SpringExtension 중 SpyBean 사용법
+- 객체의 행동을 그대로 유지하면서 mock의 역할도 수행한다. MockBean은 객체의 행동도 지정해주어야 한다.
+- https://www.concretepage.com/spring-5/spybean-example-spring-test
