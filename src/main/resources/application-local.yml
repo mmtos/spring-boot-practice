@@ -1,0 +1,48 @@
+logging:
+  level:
+    root: info
+    #org.springframework.jdbc: debug
+spring:
+  h2:
+    console:
+      enabled: true
+  datasource:
+    driver-class-name: org.h2.Driver
+    url: jdbc:h2:mem:testdb;MODE=MYSQL;
+    username: testdb
+    password: testdb
+    initialization-mode: always
+    schema: classpath:test-schema-h2.sql
+  batch:
+    jdbc:
+      initialize-schema: always
+      platform: h2
+mybatis:
+  type-aliases-package: mmtos.practice.springboot.batch.dto
+  mapper-locations: /mapper/**/*.xml
+  executor-type: BATCH
+  configuration:
+    map-underscore-to-camel-case: true
+    vfsImpl: org.mybatis.spring.boot.autoconfigure.SpringBootVFS
+
+openapi:
+  data.go.kr:
+    key: ENC(rRhgbPILwZP3bxnkYP5xegHH3XmJCxuEtk3aqD/N1a6I9BhQhysejl5W2lE8PE+EPAbbuRwWHY/zr6bst8gvjnCVCswEIgRul6/B3ZMq88MAR40F08FRCveSWRSXJTpyeGnEh7h7Vl0=)
+    hospital:
+      url: http://apis.data.go.kr/B552657/HsptlAsembySearchService/getHsptlMdcncListInfoInqire
+
+#spring.datasource:
+#  username: ENC(CzcbdFquIV3sofL90pC2nNJOP9ddasxP)
+#  password: ENC(BnbcWAF9yghWgUNV9/K43w==)
+#  url: jdbc:mysql://localhost:3306/batch_db?serverTimezone=UTC&characterEncoding=UTF-8
+#  driver-class-name: com.mysql.cj.jdbc.Driver
+#  platform: mysql
+#  #initialization-mode: always
+#  initialization-mode: never
+#
+#spring.batch:
+#  jdbc:
+#    #initialize-schema: always
+#    initialize-schema: never
+#  job:
+#    names: hospitalBatchJob

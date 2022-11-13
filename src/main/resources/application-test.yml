@@ -1,0 +1,34 @@
+logging:
+  level:
+    root: info
+mybatis:
+  type-aliases-package: mmtos.practice.springboot.batch.dto
+  mapper-locations: /mapper/**/*.xml
+  executor-type: BATCH
+  configuration:
+    map-underscore-to-camel-case: true
+    vfsImpl: org.mybatis.spring.boot.autoconfigure.SpringBootVFS
+
+openapi:
+  data.go.kr:
+    key: ENC(rRhgbPILwZP3bxnkYP5xegHH3XmJCxuEtk3aqD/N1a6I9BhQhysejl5W2lE8PE+EPAbbuRwWHY/zr6bst8gvjnCVCswEIgRul6/B3ZMq88MAR40F08FRCveSWRSXJTpyeGnEh7h7Vl0=)
+    hospital:
+      url: http://apis.data.go.kr/B552657/HsptlAsembySearchService/getHsptlMdcncListInfoInqire
+
+spring:
+  h2:
+    console:
+      enabled: true
+  datasource:
+    driver-class-name: org.h2.Driver
+    url: jdbc:h2:mem:testdb;MODE=MYSQL;
+    username: testdb
+    password: testdb
+    initialization-mode: always
+    schema: classpath:test-schema-h2.sql
+  batch:
+    jdbc:
+      initialize-schema: always
+      platform: h2
+    job:
+      names: hospitalBatchJob

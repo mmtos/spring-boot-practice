@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="Person">
+    <select id="findAll" resultType="Person">
+        SELECT * FROM PEOPLE
+    </select>
+    <insert id="insertPerson" parameterType="Person">
+        INSERT INTO people (person_id, first_name, last_name) VALUES (people_seq.NEXTVAL,#{firstName}, #{lastName})
+    </insert>
+
+</mapper>

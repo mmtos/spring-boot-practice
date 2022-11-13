@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="Hospital">
+    <select id="selectAll" resultType="Hospital">
+        SELECT RNUM,DUTY_NAME FROM HOSPITAL
+    </select>
+    <update id="insertHospitalOracle" parameterType="Hospital">
+        MERGE INTO HOSPITAL A
+        USING DUAL
+        ON (A.RNUM = #{rnum})
+        WHEN MATCHED THEN
+        UPDATE SET DUTY_NAME = #{dutyName}
+        WHEN NOT MATCHED THEN
+        INSERT ( RNUM, DUTY_NAME)
+        VALUES (#{rnum},#{dutyName})
+    </update>
+    <update id="insertHospital" parameterType="Hospital">
+        INSERT INTO HOSPITAL(
+            rnum,
+            duty_name
+        )VALUES(
+            #{rnum},
+            #{dutyName}
+        )
+        ON DUPLICATE KEY UPDATE
+            duty_name = #{dutyName}
+    </update>
+</mapper>

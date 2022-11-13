@@ -1,1 +1,7 @@
-#empty
+logging:
+  level:
+    root: info
+
+spring:
+  profiles:
+    active: local
