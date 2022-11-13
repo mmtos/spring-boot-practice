@@ -6,3 +6,4 @@
 - [basic](https://github.com/mmtos/spring-boot-practice/tree/basic)
 - [websocket](https://github.com/mmtos/spring-boot-practice/tree/websocket)
 - [batch](https://github.com/mmtos/spring-boot-practice/tree/batch)
+- [cache](https://github.com/mmtos/spring-boot-practice/tree/cache)
