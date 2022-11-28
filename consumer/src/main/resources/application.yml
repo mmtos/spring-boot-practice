@@ -1,1 +1,7 @@
-#empty
+logging:
+  level:
+    root: WARN
+    mmtos.practice.springboot: INFO
+spring:
+  kafka:
+    bootstrap-servers: 192.168.219.1:9092
