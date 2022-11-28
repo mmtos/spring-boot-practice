@@ -1,1 +1,8 @@
-#empty
+logging:
+  level:
+    root: WARN
+    org:
+      springframework: DEBUG
+spring:
+  kafka:
+    bootstrap-servers: 192.168.219.1:9092
