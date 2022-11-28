@@ -3,7 +3,7 @@
 > 각 예제들은 브랜치를 기반으로 나누어져 있습니다.
 
 ## 필기 바로가기
-- [note](https://github.com/mmtos/spring-boot-practice/tree/${branchname}/src/main/resources/note/${branchname})
+- [note](https://github.com/mmtos/spring-boot-practice/tree/kafka/note)
 
 ## 메인으로 가기
 - [main](https://github.com/mmtos/spring-boot-practice)
