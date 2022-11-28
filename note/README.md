@@ -1,4 +1,4 @@
-# Kafka 연습
+# Simple Kafka App
 
 ## 프로젝트 컴포넌트 설계
 ### consumer
@@ -28,7 +28,11 @@
 curl -sSL https://raw.githubusercontent.com/bitnami/containers/main/bitnami/kafka/docker-compose.yml > docker-compose.yml
 ```
 
-2. 클라이언트에게 노출할 리스너 IP 설정(docker-compose.yml 일부 수정)
+2. 클라이언트에게 노출할 리스너 IP 설정
+> 설정 변경 없이 바로 실행시 앱에서 broker로 접근이 불가능했음
+> https://stackoverflow.com/questions/57965731
+
+- docker-compose.yml 일부 수정
 ```
     environment:
       - KAFKA_CFG_ZOOKEEPER_CONNECT=zookeeper:2181
