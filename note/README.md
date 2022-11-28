@@ -1,5 +1,9 @@
 # Simple Kafka App
 
+## TODO
+- [X] consumer group에 consumer 추가
+- [ ] Kafka Test 하기   
+
 ## 프로젝트 컴포넌트 설계
 ### consumer
 - 메시지를 소비하는 컴포넌트
@@ -52,12 +56,15 @@ docker-compose up -d
 ### 토픽 생성 및 메시지 생성 / 소비 테스트
 ```
 
-docker-compose exec kafka /opt/bitnami/kafka/bin/kafka-topics.sh --create --bootstrap-server localhost:9092 --topic testtopic --partitions 1 --replication-factor 1
+docker-compose exec kafka /opt/bitnami/kafka/bin/kafka-topics.sh --create --bootstrap-server kafka:9092 --topic testtopic --partitions 6 --replication-factor 1
+docker-compose exec kafka /opt/bitnami/kafka/bin/kafka-topics.sh --describe --bootstrap-server kafka:9092 --topic testtopic
 docker-compose exec kafka /opt/bitnami/kafka/bin/kafka-console-producer.sh --topic testtopic --broker-list localhost:9092 
 > a
 > b
 > c
 docker-compose exec kafka /opt/bitnami/kafka/bin/kafka-console-consumer.sh --topic testtopic --bootstrap-server localhost:9092 --from-beginning
+docker-compose exec kafka /opt/bitnami/kafka/bin/kafka-topics.sh --delete --bootstrap-server kafka:9092 --topic testtopic
+docker-compose exec kafka /opt/bitnami/kafka/bin/kafka-topics.sh --list --bootstrap-server kafka:9092
 ```
 
 

@@ -21,7 +21,7 @@ public class KafkaConfig {
     private String bootstrapAddress;
 
     public NewTopic myTopic(){
-        return new NewTopic(MY_TOPIC, 1, (short) 1);
+        return new NewTopic(MY_TOPIC, 6, (short) 1);
     }
 
     @Bean

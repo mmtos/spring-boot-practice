@@ -14,6 +14,12 @@ public class CountMessageConsumer {
     @KafkaListener(topics = KafkaConfig.MY_TOPIC, groupId = KafkaConfig.MY_TOPIC_CONSUMER_GROUP)
     public void consumer(ConsumerRecord<?, ?> consumerRecord) {
 
-        log.info("consumer received value: {}", consumerRecord.value().toString());
+        log.info("consumer 1 received value: {}", consumerRecord.value().toString());
+    }
+
+    @KafkaListener(topics = KafkaConfig.MY_TOPIC, groupId = KafkaConfig.MY_TOPIC_CONSUMER_GROUP)
+    public void consumer2(ConsumerRecord<?, ?> consumerRecord) {
+
+        log.info("consumer 2 received value: {}", consumerRecord.value().toString());
     }
 }
