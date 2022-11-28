@@ -8,3 +8,4 @@
 - [batch](https://github.com/mmtos/spring-boot-practice/tree/batch)
 - [cache](https://github.com/mmtos/spring-boot-practice/tree/cache)
 - [kafka](https://github.com/mmtos/spring-boot-practice/tree/kafka)
+- [redis](https://github.com/mmtos/spring-boot-practice/tree/redis)
