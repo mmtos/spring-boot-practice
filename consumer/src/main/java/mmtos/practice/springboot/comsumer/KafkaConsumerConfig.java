@@ -14,7 +14,7 @@ import org.springframework.kafka.core.DefaultKafkaConsumerFactory;
 
 @Configuration
 @EnableKafka
-public class KafkaConfig {
+public class KafkaConsumerConfig {
 
     public static final String MY_TOPIC = "mytopic";
     public static final String MY_TOPIC_CONSUMER_GROUP = "mytopic_group";
